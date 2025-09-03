@@ -1,0 +1,148 @@
+/* globals.css — REGIA-UN Landing
+   - Reuse colors from theme.css
+   - Map to landing component vars
+   - Neutral, professional, light theme (matches your palette)
+*/
+
+/* --- Base palette from theme.css --- */
+:root {
+  --color-bg-main: #F4F3F0;
+  --color-bg-sidebar: #EDEBE9;
+  --color-border: #C8C6C4;
+
+  --color-text-primary: #2E2E2E;
+  --color-text-secondary: #5F5F5F;
+  --color-text-disabled: #B3B1AF;
+
+  --color-accent: #5A7F9C;
+  --color-accent-hover: #4A6C85;
+  --color-link: #3A5A75;
+}
+
+/* --- Bridge: variables expected by the landing component --- */
+:root {
+  /* Surface & text */
+  --bg: var(--color-bg-main);
+  --card: #ffffff;
+  --muted: #ECEBE8;         /* soft section bg */
+  --text: var(--color-text-primary);
+  --subtle: var(--color-text-secondary);
+
+  /* Brand / accent */
+  --brand: var(--color-accent);
+  --brand-contrast: #ffffff;
+  --accent: #7FB2D6;        /* secondary accent hue */
+  --ring: rgba(58, 90, 117, 0.35);  /* focus/outline color */
+}
+
+/* --- Global resets / base --- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem 0;
+}
+p { color: var(--subtle); margin: 0.5rem 0; }
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Layout helpers --- */
+.container {
+  width: 100%;
+  max-width: 72rem; /* ~1152px */
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.section {
+  padding: 4rem 0;
+}
+.section.alt {
+  background: color-mix(in oklab, var(--muted) 50%, white);
+}
+
+/* --- Cards --- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease, background-color 120ms ease;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: var(--brand);
+  color: var(--brand-contrast);
+  border-color: color-mix(in oklab, var(--ring) 60%, transparent);
+}
+.btn-primary:hover { opacity: 0.92; }
+
+.btn-ghost {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--color-border);
+}
+.btn-ghost:hover { background: color-mix(in oklab, var(--card) 80%, var(--muted)); }
+
+/* --- Badges / pills --- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--ring);
+  background: color-mix(in oklab, var(--brand) 10%, transparent);
+  color: var(--subtle);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* --- Nav / Header --- */
+.navbar {
+  position: sticky; top: 0; z-index: 50;
+  background: color-mix(in oklab, var(--bg) 85%, #000000);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.navbar a { color: var(--subtle); font-size: 0.9rem; }
+.navbar a:hover { color: var(--text); }
+
+/* --- Footer --- */
+.footer {
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 1.5rem 0;
+  color: var(--subtle);
+  font-size: 0.9rem;
+}
+
+/* --- Media helpers --- */
+@media (max-width: 768px) {
+  .section { padding: 3rem 0; }
+}
