@@ -50,9 +50,10 @@
     --color-text-secondary: #A8B0B6;
     --color-text-disabled: #6B7280;
 
-    --color-accent: #7FB2D6; /* keep brand hue, slightly brighter on dark */
-    --color-accent-hover: #94C1DF;
-    --color-link: #9CC3E0;
+    /* Keep accent colors identical to light mode */
+    --color-accent: #5A7F9C;
+    --color-accent-hover: #4A6C85;
+    --color-link: #3A5A75;
 
     /* Bridge */
     --bg: var(--color-bg-main);
@@ -63,8 +64,8 @@
 
     --brand: var(--color-accent);
     --brand-contrast: #0B0E10;
-    --accent: #9CC3E0;
-    --ring: rgba(124, 164, 194, 0.35);
+    --accent: #7FB2D6;
+    --ring: rgba(58, 90, 117, 0.35);
   }
 }
 

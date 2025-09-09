@@ -40,7 +40,46 @@ The regia-landing repo hosts the **marketing/partner-facing website** for **REGI
 - [x] Create placeholder public/og.png for link previews
 - [x] Add public/favicon.ico
 - [x] Test build locally (npm run build) and confirm no errors
-- [ ] Deploy to Vercel and link custom domain
+- [x] Deploy to Vercel 
+- [ ] link custom domain
+
+### Cleanup
+- [x] replace the "B" in the first element (blue box) with "REGIA-UN" in a larger font size and in the background color
+- [x] remove the "REGIA-UN" printed after the blue box
+- [x] increase height of the top bar and increase font size of links
+- [x] links in the top bar should be, in order:
+    - Use Cases
+    - Product
+    - Roadmap
+    - Contact
+- [x] remove "Talk to us" button in top bar
+- [x] increase slightly size of "pills" throughout page. 
+- [x] turn the "it leverages..." list into bullet points using same formatting as other bullet pointed lists (dashes rather than bullets)
+    - add ", eliminating hallucination" to the end of the third bullet point.
+- [x] consolidate the "Why Regia" and "Existing Tools" and "Where it helps today" sections into a "Use Cases" section
+    Then use h2 level headings as subsections:
+        - turn "Where current options fall short" into a list that doesn't "name names" when it comes to existing tools, just summarizes them
+- [x] link the "Product" link at the top to the "How REGIA works" section
+    - Remove the "Data boundaries" box 
+
+- [x] For the Roadmap, use the same dynamic boxes as in other sections, and make the phases line up next to each other horizontally (they'll have to be tall and narrow). Then change the phase descriptions to the following:
+    - Phase 1: Early prototype: web app showing proof of concept; basic query-and-response function; prototype database with a handful of country contexts (~600 documents)
+    - Phase 2: Functional product: expansive UN document database (10,000+ documents); session memory for response follow up customizable output formats; 
+    - Phase 3: Product expansion: user uploads; more comprehensive document database plus integration with external databases; sophisticated AI workflows and tool-calling; advanced response export options
+
+### Metadata could be richer for SEO and social sharing
+1. In `app/layout.tsx`, add fields:
+
+   ```ts
+   metadataBase: new URL("https://regia-landing.vercel.app"),
+   keywords: ["UN", "international affairs", "AI assistant"],
+   openGraph: { type: "website", /* ... */ },
+   twitter: { site: "@your_handle", /* ... */ },
+   ```
+2. Add `public/favicon.ico` and a minimal `public/robots.txt`.
+3. Reference the favicon via `metadata.icons`.
+
+
 
 ---
 
