@@ -67,6 +67,18 @@ The regia-landing repo hosts the **marketing/partner-facing website** for **REGI
     - Phase 2: Functional product: expansive UN document database (10,000+ documents); session memory for response follow up customizable output formats; 
     - Phase 3: Product expansion: user uploads; more comprehensive document database plus integration with external databases; sophisticated AI workflows and tool-calling; advanced response export options
 
+#### Further cleanup
+- [x] decrease transparency on the top bar: currently when you scroll down it blends perfectly with background, causing confusing display
+- [x] add some button background to the nav links
+- [x] make the "Use Cases" subsections the same h2 level, and reorder them to:
+    - first present "Challenges" but rename it "Constraints facing policy experts"
+    - then "Where current options fall short" (bold the parts of each line before the colon)
+    - finally "How REGIA helps"
+- [x] under How REGIA works, rephrase it to be "REGIA delivers specific, grounded responses to policy queries by combining:"
+- [x] turn the phase boxes under Roadmap into the same format as the boxes under "How Regia works" (in other words, they should also elevate and have shadow when moused over)
+- [x] add a "Contact" pill above "Show REGIA-UN to your team"
+
+
 ### Metadata could be richer for SEO and social sharing
 1. In `app/layout.tsx`, add fields:
 

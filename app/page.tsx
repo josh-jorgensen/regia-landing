@@ -39,18 +39,18 @@ export default function MarketingPage() {
   return (
     <main className="min-h-[100svh] bg-[var(--bg)] text-[var(--text)]">
       {/* NAV */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--bg)_85%,#000)]/80 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--bg)_75%,#000)] backdrop-blur">
         <Container className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-10 items-center justify-center rounded-xl bg-[var(--brand)] px-3 text-[var(--brand-contrast)] font-semibold tracking-wide">
               REGIA‑UN
             </div>
           </div>
-          <nav className="hidden gap-8 text-base text-[var(--subtle)] md:flex">
-            <a href="#use-cases" className="hover:text-[var(--text)]">Use Cases</a>
-            <a href="#product" className="hover:text-[var(--text)]">Product</a>
-            <a href="#roadmap" className="hover:text-[var(--text)]">Roadmap</a>
-            <a href="#contact" className="hover:text-[var(--text)]">Contact</a>
+          <nav className="hidden gap-2 text-base text-[var(--subtle)] md:flex">
+            <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Use Cases</a>
+            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Product</a>
+            <a href="#roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Roadmap</a>
+            <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Contact</a>
           </nav>
           <div className="hidden md:block" />
         </Container>
@@ -104,7 +104,7 @@ export default function MarketingPage() {
           </div>
 
           <div className="mt-10 max-w-2xl">
-            <h3 className="text-2xl font-semibold">Challenges</h3>
+            <h2 className="text-2xl font-semibold">Constraints facing policy experts</h2>
             <ul className="mt-3 grid gap-2 text-[var(--subtle)]">
               <li>— Overwhelming amount of information on any given file</li>
               <li>— Limited time to familiarize on a new topic or country context</li>
@@ -113,12 +113,17 @@ export default function MarketingPage() {
           </div>
 
           <div className="mt-8 max-w-2xl">
-            <h3 className="text-2xl font-semibold">Where current options fall short</h3>
+            <h2 className="text-2xl font-semibold">Where current options fall short</h2>
             <ul className="mt-3 grid gap-2 text-[var(--subtle)]">
-              <li>— Generic AI chat interfaces: often poorly grounded and prone to hallucinations</li>
-              <li>— Keyword search tools: limited relevance ranking; time‑consuming to sift documents</li>
-              <li>— Fragmented sources: difficult to consolidate authoritative UN information</li>
+              <li><span className="font-semibold text-[var(--text)]">— Generic AI chat interfaces:</span> often poorly grounded and prone to hallucinations</li>
+              <li><span className="font-semibold text-[var(--text)]">— Keyword search tools:</span> limited relevance ranking; time‑consuming to sift documents</li>
+              <li><span className="font-semibold text-[var(--text)]">— Fragmented sources:</span> difficult to access and consolidate authoritative UN information</li>
             </ul>
+          </div>
+
+          <div className="mt-8 max-w-2xl">
+            <h2 className="text-2xl font-semibold">How REGIA helps</h2>
+            <p className="mt-3 text-[var(--subtle)]">Decision‑ready briefs grounded in UN sources, tailored to policy workflows.</p>
           </div>
         </Container>
       </Section>
@@ -128,7 +133,7 @@ export default function MarketingPage() {
         <Container>
           <div className="mb-10 max-w-2xl">
             <Pill>How REGIA works</Pill>
-            <h2 className="mt-4 text-3xl font-semibold">Specific, grounded responses to user queries</h2>
+            <h2 className="mt-4 text-3xl font-semibold">REGIA delivers specific, grounded responses to policy queries by combining:</h2>
             <div className="mt-3 grid gap-4 text-[var(--subtle)]">
               <div>
                 <h3 className="font-semibold text-[var(--text)]">Cutting‑edge AI technology</h3>
@@ -167,19 +172,19 @@ export default function MarketingPage() {
             <h2 className="mt-4 text-3xl font-semibold">From prototype to mission scale</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5">
+            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
               <div>
                 <h3 className="font-semibold">Phase 1 — Early prototype</h3>
                 <p className="mt-2 text-[var(--subtle)]">Web app showing proof of concept; basic query‑and‑response function; prototype database with a handful of country contexts (~600 documents).</p>
               </div>
             </div>
-            <div className="flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5">
+            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
               <div>
                 <h3 className="font-semibold">Phase 2 — Functional product</h3>
                 <p className="mt-2 text-[var(--subtle)]">Expansive UN document database (10,000+ documents); session memory for response follow up; customizable output formats.</p>
               </div>
             </div>
-            <div className="flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5">
+            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
               <div>
                 <h3 className="font-semibold">Phase 3 — Product expansion</h3>
                 <p className="mt-2 text-[var(--subtle)]">User uploads; more comprehensive document database plus integration with external databases; sophisticated AI workflows and tool‑calling; advanced response export options.</p>
@@ -193,6 +198,7 @@ export default function MarketingPage() {
       <Section id="contact">
         <Container className="grid items-center gap-6 md:grid-cols-3">
           <div className="md:col-span-2">
+            <Pill>Contact</Pill>
             <h2 className="text-3xl font-semibold">Show REGIA‑UN to your team</h2>
             <p className="mt-2 text-[var(--subtle)]">We can tailor a demo for Permanent Missions, UN departments, or other partners.</p>
           </div>
