@@ -49,7 +49,7 @@ The regia-landing repo hosts the **marketing/partner-facing website** for **REGI
 - [x] increase height of the top bar and increase font size of links
 - [x] links in the top bar should be, in order:
     - Use Cases
-    - Product
+    - How REGIA Works
     - Roadmap
     - Contact
 - [x] remove "Talk to us" button in top bar
@@ -77,7 +77,14 @@ The regia-landing repo hosts the **marketing/partner-facing website** for **REGI
 - [x] under How REGIA works, rephrase it to be "REGIA delivers specific, grounded responses to policy queries by combining:"
 - [x] turn the phase boxes under Roadmap into the same format as the boxes under "How Regia works" (in other words, they should also elevate and have shadow when moused over)
 - [x] add a "Contact" pill above "Show REGIA-UN to your team"
-
+- [x] You made the top bar completely opaque, and I wanted it to just be less transparent than before.
+- [x] make the pill size slightly bigger again.
+- [x] Change the "Product" nav link to "How REGIA Works" and change the text in the pill from "How REGIA works" to "How REGIA Works"
+- [x] For the buttons (not pills), reduce the radius on the curved corners by like 1-2 pixels.
+- [x] Let's remove the OG image because it's redundant on the website. 
+    - [x] (meanwhile change the link in the OG image to "regia.info" rather than the vercel URL)
+- [x] The background to the "Roadmap" section is slightly darker than the surrounding page background.
+- [x] The vertical spacing after the "Contact" pill is less than the vertical spacing after other pills on the page.
 
 ### Metadata could be richer for SEO and social sharing
 1. In `app/layout.tsx`, add fields:

@@ -47,7 +47,7 @@ export default function OgImage() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ fontSize: 24, color: "#5F5F5F" }}>regia‑landing.vercel.app</div>
+          <div style={{ fontSize: 24, color: "#5F5F5F" }}>regia.info</div>
           <div
             style={{
               display: "flex",

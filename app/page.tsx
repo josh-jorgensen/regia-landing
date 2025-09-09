@@ -13,7 +13,7 @@ const Container: React.FC<{ className?: string; children: React.ReactNode }> = (
 );
 
 const Pill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--ring)] bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] px-4 py-1.5 text-sm font-medium text-[var(--subtle)]">
+  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--ring)] bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] px-5 py-2 text-base font-medium text-[var(--subtle)]">
     {children}
   </span>
 );
@@ -39,7 +39,7 @@ export default function MarketingPage() {
   return (
     <main className="min-h-[100svh] bg-[var(--bg)] text-[var(--text)]">
       {/* NAV */}
-      <header className="sticky top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--bg)_75%,#000)] backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--bg)_85%,#000)]/90 backdrop-blur">
         <Container className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="flex h-10 items-center justify-center rounded-xl bg-[var(--brand)] px-3 text-[var(--brand-contrast)] font-semibold tracking-wide">
@@ -48,7 +48,7 @@ export default function MarketingPage() {
           </div>
           <nav className="hidden gap-2 text-base text-[var(--subtle)] md:flex">
             <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Use Cases</a>
-            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Product</a>
+            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">How REGIA Works</a>
             <a href="#roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Roadmap</a>
             <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Contact</a>
           </nav>
@@ -73,20 +73,15 @@ export default function MarketingPage() {
               <li>— A custom approach to provide grounded responses to user queries, eliminating hallucination</li>
             </ul>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a href="#contact" className="inline-flex items-center gap-2 rounded-xl bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-[var(--brand-contrast)] ring-1 ring-[var(--ring)] hover:opacity-90">
+              <a href="#contact" className="inline-flex items-center gap-2 rounded-[10px] bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-[var(--brand-contrast)] ring-1 ring-[var(--ring)] hover:opacity-90">
                 Request a demo
               </a>
-              <a href="#product" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[var(--card)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:bg-white/5">
+              <a href="#product" className="inline-flex items-center gap-2 rounded-[10px] border border-white/10 bg-[var(--card)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:bg-white/5">
                 How it works
               </a>
             </div>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
-            <div className="relative rounded-2xl border border-white/5 bg-[var(--card)] p-3 shadow ring-1 ring-white/5">
-              <img src="/opengraph-image" alt="REGIA-UN overview" className="aspect-video w-full rounded-xl object-cover" />
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-            </div>
-          </motion.div>
+          {/* Removed redundant hero image */}
         </Container>
       </Section>
 
@@ -132,7 +127,7 @@ export default function MarketingPage() {
       <Section id="product">
         <Container>
           <div className="mb-10 max-w-2xl">
-            <Pill>How REGIA works</Pill>
+            <Pill>How REGIA Works</Pill>
             <h2 className="mt-4 text-3xl font-semibold">REGIA delivers specific, grounded responses to policy queries by combining:</h2>
             <div className="mt-3 grid gap-4 text-[var(--subtle)]">
               <div>
@@ -165,7 +160,7 @@ export default function MarketingPage() {
       
 
       {/* ROADMAP */}
-      <Section id="roadmap" className="bg-[color-mix(in_oklab,var(--muted)_35%,transparent)]">
+      <Section id="roadmap">
         <Container>
           <div className="mb-10 max-w-2xl">
             <Pill>Roadmap</Pill>
@@ -199,11 +194,11 @@ export default function MarketingPage() {
         <Container className="grid items-center gap-6 md:grid-cols-3">
           <div className="md:col-span-2">
             <Pill>Contact</Pill>
-            <h2 className="text-3xl font-semibold">Show REGIA‑UN to your team</h2>
+            <h2 className="mt-4 text-3xl font-semibold">Show REGIA‑UN to your team</h2>
             <p className="mt-2 text-[var(--subtle)]">We can tailor a demo for Permanent Missions, UN departments, or other partners.</p>
           </div>
           <div className="md:justify-self-end">
-            <a href="mailto:contact@regia.info" className="inline-flex items-center gap-2 rounded-xl bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-[var(--brand-contrast)] ring-1 ring-[var(--ring)] hover:opacity-90">
+            <a href="mailto:contact@regia.info" className="inline-flex items-center gap-2 rounded-[10px] bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-[var(--brand-contrast)] ring-1 ring-[var(--ring)] hover:opacity-90">
               Email us <ArrowRight className="h-4 w-4" />
             </a>
           </div>
