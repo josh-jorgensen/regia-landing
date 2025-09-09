@@ -39,6 +39,35 @@
   --ring: rgba(58, 90, 117, 0.35);  /* focus/outline color */
 }
 
+/* --- Dark mode overrides --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-main: #0F1112;
+    --color-bg-sidebar: #141618;
+    --color-border: #2A2E32;
+
+    --color-text-primary: #ECEFF1;
+    --color-text-secondary: #A8B0B6;
+    --color-text-disabled: #6B7280;
+
+    --color-accent: #7FB2D6; /* keep brand hue, slightly brighter on dark */
+    --color-accent-hover: #94C1DF;
+    --color-link: #9CC3E0;
+
+    /* Bridge */
+    --bg: var(--color-bg-main);
+    --card: #161a1d;
+    --muted: #1B2024;
+    --text: var(--color-text-primary);
+    --subtle: var(--color-text-secondary);
+
+    --brand: var(--color-accent);
+    --brand-contrast: #0B0E10;
+    --accent: #9CC3E0;
+    --ring: rgba(124, 164, 194, 0.35);
+  }
+}
+
 /* --- Global resets / base --- */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
