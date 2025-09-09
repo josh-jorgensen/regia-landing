@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, FileText, Sparkles, Server, Globe2, BarChart3 } from "lucide-react";
+import { ArrowRight, FileText, Files, Search, BookOpenText, Quote, Sparkles, Server, Globe2, BarChart3, Cog } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Section: React.FC<{ id?: string; className?: string; children: React.ReactNode }> = ({ id, className, children }) => (
-  <section id={id} className={`w-full py-16 md:py-24 ${className || ""}`}>{children}</section>
+  <section id={id} className={`w-full py-14 md:py-20 ${className || ""}`}>{children}</section>
 );
 
 const Container: React.FC<{ className?: string; children: React.ReactNode }> = ({ className, children }) => (
@@ -20,7 +20,7 @@ const Pill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 const FeatureCard: React.FC<{ icon: React.ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
   <div className="group rounded-2xl border border-white/5 bg-[var(--card)] p-6 shadow-sm ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
-    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] ring-1 ring-[var(--ring)]">
+    <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] ring-1 ring-[var(--ring)]">
       {icon}
     </div>
     <h3 className="mb-2 text-lg font-semibold text-[var(--text)]">{title}</h3>
@@ -46,11 +46,11 @@ export default function MarketingPage() {
               REGIA
             </a>
           </div>
-          <nav className="hidden gap-2 text-base text-[var(--subtle)] md:flex">
-            <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Use Cases</a>
-            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">How REGIA Works</a>
-            <a href="#product-roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Product Roadmap</a>
-            <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 hover:bg-white/10 hover:text-[var(--text)]">Contact</a>
+          <nav className="hidden gap-2 text-base md:flex">
+            <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Use Cases</a>
+            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">How REGIA Works</a>
+            <a href="#product-roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Product Roadmap</a>
+            <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Contact</a>
           </nav>
           <div className="hidden md:block" />
         </Container>
@@ -75,9 +75,6 @@ export default function MarketingPage() {
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a href="#contact" className="inline-flex items-center gap-2 rounded-[10px] border border-[var(--brand)] bg-transparent px-4 py-2.5 text-sm font-medium text-[var(--brand)] ring-1 ring-[var(--ring)] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)]">
                 Request a demo
-              </a>
-              <a href="#product" className="inline-flex items-center gap-2 rounded-[10px] border border-white/10 bg-[var(--card)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:bg-white/5">
-                How it works
               </a>
             </div>
           </motion.div>
@@ -113,9 +110,9 @@ export default function MarketingPage() {
             <h2 className="text-2xl font-semibold">Where REGIA helps today</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <FeatureCard icon={<FileText className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Briefing notes" desc="Rapid, referenced notes for briefings, meetings, background notes, etc." />
-            <FeatureCard icon={<Sparkles className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Report drafting" desc="First‑pass sections for reports, grounded in relevant citations and linked to the original source documents." />
-            <FeatureCard icon={<Globe2 className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Research deep‑dives" desc="Thematic and cross‑pillar scans of mandates, strategic assessments, operational developments, and past decisions." />
+            <FeatureCard icon={<FileText className="h-5 w-5 text-white" />} title="Briefing notes" desc="Rapid, referenced notes for briefings, meetings, background notes, etc." />
+            <FeatureCard icon={<Files className="h-5 w-5 text-white" />} title="Report drafting" desc="First‑pass sections for reports, grounded in relevant citations and linked to the original source documents." />
+            <FeatureCard icon={<Search className="h-5 w-5 text-white" />} title="Research deep‑dives" desc="Thematic and cross‑pillar scans of mandates, strategic assessments, operational developments, and past decisions." />
           </div>
         </Container>
       </Section>
@@ -145,10 +142,10 @@ export default function MarketingPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            <FeatureCard icon={<FileText className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Curated UN corpus" desc="Security Council resolutions, SG reports, panels of experts, and more. Built for policy relevance and traceability." />
-            <FeatureCard icon={<Sparkles className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Retrieval‑enhanced drafting" desc="Retrieval‑enhanced generation yields fast, factual drafts with inline citations and quotes." />
-            <FeatureCard icon={<BarChart3 className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Evaluation‑driven accuracy" desc="Automated testing to establish baseline performance and improve response quality. Iterative evaluations guide parameter and prompt adjustment and help systematicallyavoid hallucination." />
-            <FeatureCard icon={<Globe2 className="h-5 w-5 text-[var(--brand-contrast)]" />} title="Mission‑ready" desc="Built for policy teams; supports research and alalysis on thematic files, country contexts, and org‑specific priorities. Flexible application components allow adaptation for various users and use cases." />
+            <FeatureCard icon={<BookOpenText className="h-5 w-5 text-white" />} title="Curated UN corpus" desc="Security Council resolutions, SG reports, panels of experts, and more. Built for policy relevance and traceability." />
+            <FeatureCard icon={<Quote className="h-5 w-5 text-white" />} title="Retrieval‑enhanced drafting" desc="Retrieval‑enhanced generation yields fast, factual drafts with inline citations and quotes." />
+            <FeatureCard icon={<BarChart3 className="h-5 w-5 text-white" />} title="Evaluation‑driven accuracy" desc="Automated testing to establish baseline performance and improve response quality. Iterative evaluations guide parameter and prompt adjustment and help systematicallyavoid hallucination." />
+            <FeatureCard icon={<Globe2 className="h-5 w-5 text-white" />} title="Mission‑ready" desc="Built for policy teams; supports research and alalysis on thematic files, country contexts, and org‑specific priorities. Flexible application components allow adaptation for various users and use cases." />
           </div>
         </Container>
       </Section>
@@ -160,30 +157,30 @@ export default function MarketingPage() {
         <Container>
           <div className="mb-10 max-w-2xl">
             <Pill>Product Roadmap</Pill>
-            <h2 className="mt-4 text-3xl font-semibold">From prototype to mission scale</h2>
+            <h2 className="mt-4 text-3xl font-semibold">From prototype to production scale</h2>
           </div>
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] ring-1 ring-[var(--ring)]">
-                <Sparkles className="h-5 w-5 text-[var(--brand-contrast)]" />
+            <div className="group flex h-full min-h-[18rem] flex-col justify-start rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] ring-1 ring-[var(--ring)]">
+                <Sparkles className="h-5 w-5 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold">Phase 1 — Early prototype</h3>
                 <p className="mt-2 text-[var(--subtle)]">Web app showing proof of concept; basic query‑and‑response function; prototype database with a handful of country contexts (~600 documents).</p>
               </div>
             </div>
-            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] ring-1 ring-[var(--ring)]">
-                <Server className="h-5 w-5 text-[var(--brand-contrast)]" />
+            <div className="group flex h-full min-h-[18rem] flex-col justify-start rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] ring-1 ring-[var(--ring)]">
+                <Server className="h-5 w-5 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold">Phase 2 — Functional product</h3>
                 <p className="mt-2 text-[var(--subtle)]">Expansive UN document database (10,000+ documents); session memory for response follow up; customizable output formats.</p>
               </div>
             </div>
-            <div className="group flex h-full min-h-[18rem] flex-col justify-between rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[color-mix(in_oklab,var(--brand)_18%,transparent)] ring-1 ring-[var(--ring)]">
-                <Globe2 className="h-5 w-5 text-[var(--brand-contrast)]" />
+            <div className="group flex h-full min-h-[18rem] flex-col justify-start rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
+              <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] ring-1 ring-[var(--ring)]">
+                <Cog className="h-5 w-5 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold">Phase 3 — Product expansion</h3>
@@ -200,7 +197,7 @@ export default function MarketingPage() {
           <div className="md:col-span-2">
             <Pill>Contact</Pill>
             <h2 className="mt-4 text-3xl font-semibold">Show REGIA to your team</h2>
-            <p className="mt-2 text-[var(--subtle)]">We can tailor a demo for Permanent Missions, UN departments, or other partners.</p>
+            <p className="mt-2 text-[var(--subtle)]">We can tailor a prototype demonstration for Permanent Missions, UN departments, or other partners.</p>
           </div>
           <div className="md:justify-self-end">
             <a href="mailto:contact@regia.info" className="inline-flex items-center gap-2 rounded-[10px] bg-[var(--brand)] px-4 py-2.5 text-sm font-medium text-[var(--brand-contrast)] ring-1 ring-[var(--ring)] hover:opacity-90">
