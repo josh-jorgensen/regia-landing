@@ -81,9 +81,8 @@ export default function MarketingPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
             <div className="relative rounded-2xl border border-white/5 bg-[var(--card)] p-3 shadow ring-1 ring-white/5">
-              <div className="aspect-video w-full rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--accent)] opacity-90" />
+              <img src="/og.png" alt="REGIA-UN overview" className="aspect-video w-full rounded-xl object-cover" />
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
-              <p className="mt-3 text-center text-xs text-[var(--subtle)]">(Embed a short product video or animated walkthrough here)</p>
             </div>
           </motion.div>
         </Container>
