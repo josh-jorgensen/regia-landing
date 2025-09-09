@@ -27,7 +27,7 @@ export const metadata = {
     description: "AI-powered assistant for diplomats and policy teams. Combines retrieval-augmented generation with curated UN documents to deliver fast, factual briefs and drafts.",
     images: [
       {
-        url: "/og.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "REGIA-UN - AI-Powered Research for International Affairs",
@@ -38,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "REGIA-UN - AI-Powered Research for International Affairs",
     description: "AI-powered assistant for diplomats and policy teams. Combines retrieval-augmented generation with curated UN documents.",
-    images: ["/og.png"],
+    images: ["/twitter-image"],
     creator: "@regia_un",
   },
   verification: {

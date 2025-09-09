@@ -81,7 +81,7 @@ export default function MarketingPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
             <div className="relative rounded-2xl border border-white/5 bg-[var(--card)] p-3 shadow ring-1 ring-white/5">
-              <img src="/og.png" alt="REGIA-UN overview" className="aspect-video w-full rounded-xl object-cover" />
+              <img src="/opengraph-image" alt="REGIA-UN overview" className="aspect-video w-full rounded-xl object-cover" />
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
             </div>
           </motion.div>
