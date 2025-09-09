@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* globals.css — REGIA-UN Landing
    - Reuse colors from theme.css
    - Map to landing component vars

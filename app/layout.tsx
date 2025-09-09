@@ -1,4 +1,6 @@
-﻿export const metadata = {
+﻿import "./globals.css";
+
+export const metadata = {
   title: "REGIA-UN",
   description: "Retrieval-Enhanced Generation for International Affairs",
   keywords: ["UN", "international affairs", "AI", "Generative AI", "UN documents", "research", "diplomacy", "policy", "briefing", "REGIA"],
