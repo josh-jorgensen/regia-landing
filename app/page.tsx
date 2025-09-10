@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, FileText, Files, Search, BookOpenText, Quote, Sparkles, Server, Globe2, BarChart3, Cog } from "lucide-react";
+import { ArrowRight, FileText, Files, Search, BookOpenText, Quote, Sparkles, Server, Globe2, BarChart3, Cog, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Section: React.FC<{ id?: string; className?: string; children: React.ReactNode }> = ({ id, className, children }) => (
@@ -36,6 +36,14 @@ const Stat: React.FC<{ value: string; label: string }> = ({ value, label }) => (
 );
 
 export default function MarketingPage() {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  React.useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
   return (
     <main id="top" className="min-h-[100svh] bg-[var(--bg)] text-[var(--text)]">
       {/* NAV */}
@@ -46,14 +54,34 @@ export default function MarketingPage() {
               REGIA
             </a>
           </div>
-          <nav role="navigation" aria-label="Primary" className="flex gap-2 text-sm md:text-base overflow-x-auto md:overflow-visible whitespace-nowrap snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
-            <a href="#use-cases" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Use Cases</a>
-            <a href="#product" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">How REGIA Works</a>
-            <a href="#product-roadmap" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Product Roadmap</a>
-            <a href="#contact" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Contact</a>
+          <nav role="navigation" aria-label="Primary" className="hidden gap-2 text-base md:flex">
+            <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Use Cases</a>
+            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">How REGIA Works</a>
+            <a href="#product-roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Product Roadmap</a>
+            <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Contact</a>
           </nav>
-          <div className="hidden md:block" />
+          <button
+            type="button"
+            className="md:hidden inline-flex items-center gap-2 rounded-md px-3 py-2 text-[var(--text)] bg-[color-mix(in_oklab,var(--card)_60%,transparent)] ring-1 ring-[var(--ring)]"
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            Menu
+          </button>
         </Container>
+        {mobileOpen && (
+          <div id="mobile-nav" className="md:hidden border-t border-white/5 bg-[color-mix(in_oklab,var(--bg)_90%,#000)]/95">
+            <Container className="flex flex-col gap-2 py-3">
+              <a href="#use-cases" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2 font-semibold text-[var(--text)] bg-[color-mix(in_oklab,var(--card)_60%,transparent)] hover:bg-white/10">Use Cases</a>
+              <a href="#product" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2 font-semibold text-[var(--text)] bg-[color-mix(in_oklab,var(--card)_60%,transparent)] hover:bg-white/10">How REGIA Works</a>
+              <a href="#product-roadmap" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2 font-semibold text-[var(--text)] bg-[color-mix(in_oklab,var(--card)_60%,transparent)] hover:bg-white/10">Product Roadmap</a>
+              <a href="#contact" onClick={() => setMobileOpen(false)} className="rounded-md px-3 py-2 font-semibold text-[var(--text)] bg-[color-mix(in_oklab,var(--card)_60%,transparent)] hover:bg-white/10">Contact</a>
+            </Container>
+          </div>
+        )}
       </header>
 
       {/* HERO */}
