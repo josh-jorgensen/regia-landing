@@ -13,7 +13,7 @@ const Container: React.FC<{ className?: string; children: React.ReactNode }> = (
 );
 
 const Pill: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--ring)] bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] px-5 py-2 text-base font-medium text-[var(--subtle)]">
+  <span className="inline-flex items-center gap-2 rounded-full border border-[var(--ring)] bg-[color-mix(in_oklab,var(--brand)_10%,transparent)] px-5 py-2 text-lg font-semibold text-[var(--subtle)]">
     {children}
   </span>
 );
@@ -70,7 +70,7 @@ export default function MarketingPage() {
             <ul className="mt-3 max-w-3xl text-[var(--subtle)]">
               <li>— The latest generative AI models;</li>
               <li>— The UN’s vast collection of official documents; and</li>
-              <li>— A custom approach to provide grounded responses to user queries, eliminating hallucination.</li>
+              <li>— A tailored approach to provide grounded responses to user queries, eliminating hallucination.</li>
             </ul>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <a href="#contact" className="inline-flex items-center gap-2 rounded-[10px] border border-[var(--brand)] bg-transparent px-4 py-2.5 text-sm font-medium text-[var(--brand)] ring-1 ring-[var(--ring)] hover:bg-[color-mix(in_oklab,var(--brand)_10%,transparent)]">
@@ -107,11 +107,11 @@ export default function MarketingPage() {
             </ul>
           </div>
           <div className="mt-10 max-w-2xl">
-            <h2 className="text-2xl font-semibold">Where REGIA helps today</h2>
+            <h2 className="text-2xl font-semibold">How REGIA can help international policy professionals</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            <FeatureCard icon={<FileText className="h-5 w-5 text-white" />} title="Briefing notes" desc="Rapid, referenced notes for briefings, meetings, background notes, etc." />
-            <FeatureCard icon={<Files className="h-5 w-5 text-white" />} title="Report drafting" desc="First‑pass sections for reports, grounded in relevant citations and linked to the original source documents." />
+            <FeatureCard icon={<Files className="h-5 w-5 text-white" />} title="Briefing notes" desc="Rapid, referenced notes for briefings, meetings, background notes, etc." />
+            <FeatureCard icon={<FileText className="h-5 w-5 text-white" />} title="Report drafting" desc="First‑pass sections for reports, grounded in relevant citations and linked to the original source documents." />
             <FeatureCard icon={<Search className="h-5 w-5 text-white" />} title="Research deep‑dives" desc="Thematic and cross‑pillar scans of mandates, strategic assessments, operational developments, and past decisions." />
           </div>
         </Container>
@@ -120,7 +120,7 @@ export default function MarketingPage() {
       {/* PRODUCT */}
       <Section id="product">
         <Container>
-          <div className="mb-10 max-w-2xl">
+          <div className="mb-10">
             <Pill>How REGIA Works</Pill>
             <h2 className="mt-4 text-3xl font-semibold">REGIA delivers specific, grounded responses to policy queries by combining:</h2>
             <div className="mt-3 grid gap-4 text-[var(--subtle)]">
@@ -141,11 +141,15 @@ export default function MarketingPage() {
             </div>
           </div>
 
+          <div className="mt-10">
+            <h2 className="text-2xl font-semibold">REGIA is a modular and scalable tool built for UN experts by UN experts.</h2>
+          </div>
+
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             <FeatureCard icon={<BookOpenText className="h-5 w-5 text-white" />} title="Curated UN corpus" desc="Security Council resolutions, SG reports, panels of experts, and more. Built for policy relevance and traceability." />
             <FeatureCard icon={<Quote className="h-5 w-5 text-white" />} title="Retrieval‑enhanced drafting" desc="Retrieval‑enhanced generation yields fast, factual drafts with inline citations and quotes." />
-            <FeatureCard icon={<BarChart3 className="h-5 w-5 text-white" />} title="Evaluation‑driven accuracy" desc="Automated testing to establish baseline performance and improve response quality. Iterative evaluations guide parameter and prompt adjustment and help systematicallyavoid hallucination." />
-            <FeatureCard icon={<Globe2 className="h-5 w-5 text-white" />} title="Mission‑ready" desc="Built for policy teams; supports research and alalysis on thematic files, country contexts, and org‑specific priorities. Flexible application components allow adaptation for various users and use cases." />
+            <FeatureCard icon={<BarChart3 className="h-5 w-5 text-white" />} title="Evaluation‑driven accuracy" desc="Automated testing to establish baseline performance and improve response quality. Iterative evaluations guide parameter/prompt adjustment and help systematically avoid hallucination." />
+            <FeatureCard icon={<Cog className="h-5 w-5 text-white" />} title="Mission‑ready" desc="Built for policy teams; supports research and analysis on thematic files, country contexts, and org‑specific priorities. Flexible application components allow adaptation for various users and use cases." />
           </div>
         </Container>
       </Section>
@@ -180,7 +184,7 @@ export default function MarketingPage() {
             </div>
             <div className="group flex h-full min-h-[18rem] flex-col justify-start rounded-2xl border border-white/5 bg-[var(--card)] p-6 ring-1 ring-white/5 transition hover:-translate-y-1 hover:shadow-md">
               <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--brand)] ring-1 ring-[var(--ring)]">
-                <Cog className="h-5 w-5 text-white" />
+                <Globe2 className="h-5 w-5 text-white" />
               </div>
               <div>
                 <h3 className="font-semibold">Phase 3 — Product expansion</h3>
