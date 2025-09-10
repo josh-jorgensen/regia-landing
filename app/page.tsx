@@ -46,11 +46,11 @@ export default function MarketingPage() {
               REGIA
             </a>
           </div>
-          <nav className="hidden gap-2 text-base md:flex">
-            <a href="#use-cases" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Use Cases</a>
-            <a href="#product" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">How REGIA Works</a>
-            <a href="#product-roadmap" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Product Roadmap</a>
-            <a href="#contact" className="rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Contact</a>
+          <nav role="navigation" aria-label="Primary" className="flex gap-2 text-sm md:text-base overflow-x-auto md:overflow-visible whitespace-nowrap snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+            <a href="#use-cases" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Use Cases</a>
+            <a href="#product" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">How REGIA Works</a>
+            <a href="#product-roadmap" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Product Roadmap</a>
+            <a href="#contact" className="snap-start rounded-md bg-[color-mix(in_oklab,var(--card)_60%,transparent)] px-3 py-1 font-semibold text-[var(--text)] hover:bg-white/10">Contact</a>
           </nav>
           <div className="hidden md:block" />
         </Container>
