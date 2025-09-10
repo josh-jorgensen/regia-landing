@@ -50,7 +50,7 @@ export default function MarketingPage() {
       <header className="sticky top-0 z-50 border-b border-white/5 bg-[color-mix(in_oklab,var(--bg)_85%,#000)]/90 backdrop-blur">
         <Container className="flex h-20 items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="#top" className="flex h-12 items-center justify-center rounded-md bg-[var(--brand)] px-4 text-base text-[var(--brand-contrast)] font-semibold tracking-wide" aria-label="Go to top">
+            <a href="#top" className="flex items-center justify-center rounded-md bg-[var(--brand)] px-4 py-2 text-base text-[var(--brand-contrast)] font-semibold tracking-wide" aria-label="Go to top">
               REGIA
             </a>
           </div>
@@ -129,9 +129,9 @@ export default function MarketingPage() {
           <div className="mt-10 max-w-2xl">
             <h2 className="text-2xl font-semibold">Why current options fall short:</h2>
             <ul className="mt-3 grid gap-2 text-[var(--subtle)]">
-              <li><span className="font-semibold text-[var(--text)]">— Generic AI chat tools:</span> hallucinate frequently and poorly grounded in UN sources</li>
+              <li><span className="font-semibold text-[var(--text)]">— Generic AI chat tools:</span> hallucinate frequently and are poorly grounded in UN sources</li>
               <li><span className="font-semibold text-[var(--text)]">— Keyword search engines:</span> limited relevance unless exact phrasing is known in advance</li>
-              <li><span className="font-semibold text-[var(--text)]">— UN document systems:</span> slow to navigate and sift through documents</li>
+              <li><span className="font-semibold text-[var(--text)]">— UN document portals:</span> authoritative but slow to navigate and sift through documents</li>
             </ul>
           </div>
           <div className="mt-10 max-w-2xl">
@@ -163,8 +163,8 @@ export default function MarketingPage() {
           </div>
 
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            <FeatureCard icon={<BookOpenText className="h-5 w-5 text-white" />} title="Curated UN corpus" desc="Security Council resolutions, SG reports, panels of experts, and more. Built for policy relevance and traceability." />
-            <FeatureCard icon={<Quote className="h-5 w-5 text-white" />} title="Retrieval‑enhanced drafting" desc="Retrieval‑enhanced generation yields fast, factual drafts with inline citations and quotes." />
+            <FeatureCard icon={<BookOpenText className="h-5 w-5 text-white" />} title="Curated UN corpus" desc="Security Council resolutions, meeting records, SG reports, panel of experts reports, and more. Built for policy relevance and traceability." />
+            <FeatureCard icon={<Quote className="h-5 w-5 text-white" />} title="Retrieval‑enhanced drafting" desc="Retrieval‑enhanced AI generation synthesizes the most relevant information, yielding fast, factual drafts with inline citations and quotes." />
             <FeatureCard icon={<BarChart3 className="h-5 w-5 text-white" />} title="Evaluation‑driven accuracy" desc="Automated testing to establish baseline performance and improve response quality. Iterative evaluations guide parameter/prompt adjustment and help systematically avoid hallucination." />
             <FeatureCard icon={<Cog className="h-5 w-5 text-white" />} title="Mission‑ready architecture" desc="Built for policy teams; supports research and analysis on thematic files, country contexts, and org‑specific priorities. Flexible application components allow adaptation for various users and use cases." />
           </div>
