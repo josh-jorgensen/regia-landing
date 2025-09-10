@@ -1,12 +1,12 @@
 ﻿import "./globals.css";
 
 export const metadata = {
-  title: "REGIA-UN",
+  title: "REGIA",
   description: "Retrieval-Enhanced Generation for International Affairs",
   keywords: ["UN", "international affairs", "AI", "Generative AI", "UN documents", "research", "diplomacy", "policy", "briefing", "REGIA"],
-  authors: [{ name: "REGIA-UN Team" }],
-  creator: "REGIA-UN",
-  publisher: "REGIA-UN",
+  authors: [{ name: "REGIA Team" }],
+  creator: "REGIA",
+  publisher: "REGIA",
   robots: {
     index: true,
     follow: true,
@@ -22,24 +22,24 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://regia.info",
-    siteName: "REGIA-UN",
-    title: "REGIA-UN - AI-Powered Research for International Affairs",
+    siteName: "REGIA",
+    title: "REGIA - AI-Powered Research for International Affairs",
     description: "AI-powered assistant for diplomats and policy teams. Combines retrieval-augmented generation with curated UN documents to deliver fast, factual briefs and drafts.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "REGIA-UN - AI-Powered Research for International Affairs",
+        alt: "REGIA - AI-Powered Research for International Affairs",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "REGIA-UN - AI-Powered Research for International Affairs",
+    title: "REGIA - AI-Powered Research for International Affairs",
     description: "AI-powered assistant for diplomats and policy teams. Combines retrieval-augmented generation with curated UN documents.",
     images: ["/twitter-image"],
-    creator: "@regia_un",
+    creator: "@REGIA_App",
   },
   verification: {
     google: "your-google-verification-code",
